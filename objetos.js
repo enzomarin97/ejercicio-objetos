@@ -19,25 +19,35 @@ const datosPersonales = {
 const edadE = "edad";
 console.log(datosPersonales[edadE]);
 
+//otra forma de obtener la edad del objeto por una variable seria:
+const edadM = datosPersonales.edad;
+console.log(edadM);
 
-const datosAmigos = {
+
+/**
+ * en el enunciado habia entendido que debia crear UN OBJETO con los datos personales de
+ * dos amigos, por eso no podia hacer el ordenamiento por edad (al tener 2 variables del mismo objeto con nombre diferentes)
+ * entonces ahora crearé UN objeto para cada amigo y despues lo ordenaré
+ */
+const datosAmigo1 = {
     nombre: "mario",
     apellido: "figueroa",
     edad: 26,
     altura: 177,
     eresDesarrollador: false,
-
-    nombre_2: "maria",
-    apellido_2: "romero",
-    edad_2: 29,
-    altura_2: 165,
-    eresDesarrollador_2: true
 };
+const datosAmigo2 = {
+    nombre: "maria",
+    apellido: "romero",
+    edad: 29,
+    altura: 165,
+    eresDesarrollador: true
+}
 
-const lista = [datosPersonales, datosAmigos];
+//ahora concateno los 3 objetos en una lista
+const lista = [datosPersonales, datosAmigo1, datosAmigo2];
 console.log(lista);
 
+//ahora ordeno de mayor a menor
 const listaNueva = lista.sort((a,b) => b.edad - a.edad);
-
 console.log(listaNueva);
-
